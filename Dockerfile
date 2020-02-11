@@ -2,12 +2,12 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache \
-        nginx=1.16.1-r2 \
-        supervisor=3.3.5-r0 \
+        nginx=1.16.1-r7 \
+        supervisor=4.1.0-r1 \
   \
   && apk add --no-cache --virtual .build-dependencies \
-        git=2.22.2-r0 \
-        yarn=1.16.0-r0 \
+        git=2.25.0-r0 \
+        yarn=1.22.0-r0 \
   \
   && cd /etc \
   && git clone https://github.com/etesync/etesync-web.git \
