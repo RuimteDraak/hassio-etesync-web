@@ -2,18 +2,17 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 RUN apk add --no-cache \
-        net-tools \
-        nginx \
-        supervisor \
+        nginx=1.16.1-r2 \
+        supervisor=3.3.5-r0 \
   \
   && apk add --no-cache --virtual .build-dependencies \
-        git \
-        build-base \
-        yarn \
+        git=2.22.2-r0 \
+        yarn=1.16.0-r0 \
   \
   && cd /etc \
   && git clone https://github.com/etesync/etesync-web.git \
   && cd etesync-web \
+  && git checkout 7fbac2c401741c429c25c90c815de26481b9a8d4 \
   && yarn config set network-timeout 600000 -g \
   && yarn \
   && yarn build \
