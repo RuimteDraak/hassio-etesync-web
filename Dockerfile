@@ -12,7 +12,7 @@ RUN apk add --no-cache \
   && cd /etc \
   && git clone https://github.com/etesync/etesync-web.git \
   && cd etesync-web \
-  && git checkout 7fbac2c401741c429c25c90c815de26481b9a8d4 \
+  && git checkout 04c4ae94cd28987ec05ec5c6faea695184c0e7d1 \
   && yarn config set network-timeout 600000 -g \
   && yarn \
   && yarn build \
