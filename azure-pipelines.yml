@@ -213,9 +213,9 @@ stages:
               cd hassio-repository/hassio-$(addonName)
               if (Test-Path "config.json" -PathType Leaf) {
                 $json = (Get-Content -Path "config.json" | Out-String | ConvertFrom-Json)
-                $newVersion = $json.version
+                $currentVersion = $json.version
 
-                if ([version]$newVersion -gt [version]$version) {
+                if ([version]$version -gt [version]$currentVersion) {
                   Write-Host "New version bigger then previous version"
                 }
                 else {
