@@ -18,9 +18,7 @@ FROM $BUILD_FROM
 
 RUN apk add --no-cache \
         nginx \
-        supervisor 
-  # && chown -R root:www-data ./ \
-  # && chmod -R 754 ./ \
+        supervisor
 
 COPY --from=builder /build/etesync-web/build /etc/server
 
