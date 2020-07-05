@@ -7,7 +7,7 @@ RUN mkdir /build
 WORKDIR /build
 RUN git clone https://github.com/etesync/etesync-web.git \
       && cd etesync-web \
-      && git checkout 04c4ae94cd28987ec05ec5c6faea695184c0e7d1
+      && git checkout 985f39930ba9963559c05c0a2fe605147c59a112
 WORKDIR /build/etesync-web
 RUN yarn config set network-timeout 600000 -g
 RUN yarn
