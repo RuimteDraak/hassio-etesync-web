@@ -2,6 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM as builder
 RUN apk add --no-cache \
         git \
+        build-base \
         yarn
 RUN mkdir /build
 WORKDIR /build
