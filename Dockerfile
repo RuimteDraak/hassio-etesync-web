@@ -1,5 +1,6 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM as builder
+ENV REACT_APP_DEFAULT_API_PATH=@@DEFAULT_API_PATH@@
 RUN apk add --no-cache \
         git \
         build-base \
