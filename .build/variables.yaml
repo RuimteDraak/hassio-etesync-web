@@ -5,6 +5,6 @@ variables:
   - name: builderVersion
     value: 'latest'
   - name: addonName
-    value: 'etbase-server'
+    value: 'etesync-web'
   - name: repository
     value: 'RuimteDraak/hassio-repository.git'
