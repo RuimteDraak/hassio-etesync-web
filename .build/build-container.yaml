@@ -23,7 +23,6 @@ steps:
       targetType: 'inline'
       script: |
         sudo docker run --rm --privileged \
-          --memory "6g" \
           -v ~/.docker:/root/.docker \
           -v /$(Build.SourcesDirectory):/data \
           -v /run/docker.sock:/run/docker.sock:rw \
