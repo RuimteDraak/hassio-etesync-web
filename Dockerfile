@@ -5,6 +5,7 @@ RUN apk add --no-cache \
         git \
         build-base \
         linux-headers \
+        openssl \
         yarn \
     && mkdir /build \
     && cd build \
