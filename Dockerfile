@@ -1,6 +1,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM as builder
 ENV REACT_APP_DEFAULT_API_PATH=@@DEFAULT_API_PATH@@
+ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN apk add --no-cache \
         git \
         build-base \
@@ -16,7 +17,6 @@ RUN apk add --no-cache \
 
 WORKDIR /build/etesync-web
 RUN yarn && yarn run --inspect build
-
 FROM $BUILD_FROM
 
 RUN apk add --no-cache nginx
